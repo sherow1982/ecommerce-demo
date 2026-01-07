@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/contexts/CartContext";
 import { useState } from "react";
@@ -164,11 +163,10 @@ export default function CheckoutPage() {
                 {cart.map((item) => (
                   <div key={item.id} className="flex items-center space-x-4 space-x-reverse">
                     <div className="relative w-16 h-16 flex-shrink-0">
-                      <Image
+                      <img
                         src={item.image}
                         alt={item.nameAr}
-                        fill
-                        className="object-cover rounded"
+                        className="object-cover w-full h-full rounded"
                       />
                     </div>
                     <div className="flex-1">

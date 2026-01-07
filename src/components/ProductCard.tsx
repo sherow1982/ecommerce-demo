@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/lib/data";
 
@@ -11,11 +10,11 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <Link href={`/product/${product.id}`}>
         <div className="relative aspect-square">
-          <Image
+          <img
             src={product.image}
-            alt={product.name}
-            fill
-            className="object-cover"
+            alt={product.nameAr}
+            className="object-cover w-full h-full"
+            loading="lazy"
           />
           {product.stock < 10 && (
             <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">

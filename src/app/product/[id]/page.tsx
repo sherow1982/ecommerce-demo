@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { products } from "@/lib/data";
@@ -96,12 +95,10 @@ export default function ProductPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="relative aspect-square">
-              <Image
+              <img
                 src={product.image}
                 alt={product.nameAr}
-                fill
-                className="object-cover rounded-lg"
-                priority
+                className="object-cover w-full h-full rounded-lg"
               />
             </div>
 

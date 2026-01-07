@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useCart } from "@/contexts/CartContext";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ export default function CartPage() {
   if (cart.length === 0) {
     return (
       <main className="min-h-screen py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
             سلة التسوق
           </h1>
@@ -46,11 +45,10 @@ export default function CartPage() {
               >
                 <div className="flex items-start space-x-4 space-x-reverse">
                   <div className="relative w-24 h-24 flex-shrink-0">
-                    <Image
+                    <img
                       src={item.image}
                       alt={item.nameAr}
-                      fill
-                      className="object-cover rounded"
+                      className="object-cover w-full h-full rounded"
                     />
                   </div>
                   <div className="flex-1">
